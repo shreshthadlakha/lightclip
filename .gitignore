@@ -1,0 +1,25 @@
+# build/.gitignore — keep the repo clean of runtime state and secrets
+
+# runtime outputs & caches (regenerated locally)
+shorts*/
+work/
+bench_out/
+uploads/
+
+# python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# local config — NEVER commit keys
+lightclip.toml
+.env
+
+# release archives (GitHub Releases handles distribution)
+*.zip
+
+# OS noise
+Thumbs.db
+.DS_Store

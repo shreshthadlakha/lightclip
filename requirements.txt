@@ -1,0 +1,14 @@
+# LightClip v0.1 runtime dependencies (Python 3.11+)
+faster-whisper>=1.0
+av<19            # faster-whisper 1.2.x uses av.open(metadata_errors=...), removed in PyAV 19
+pydantic>=2.5
+anthropic>=0.40
+openai>=1.50
+yt-dlp>=2026.10  # URL input (FR-2)
+opencv-python>=4.8  # --style face (FR-21, YuNet smart-crop)
+
+# dev / tests
+pytest>=8
+psutil>=5.9        # tests/benchmark.py (NFR-1/2 process-tree RSS sampling)
+
+# v0.2 (optional, face-tracked crop): opencv-python
